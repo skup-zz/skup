@@ -1,0 +1,23 @@
+<li class="anyfont-style-block" >
+	{STYLE_CSS}
+	<ul id="{STYLE_NAME_ID}_item" class="style-list-item" >
+		<li class="checkbox"><input  class="clist" type="checkbox" name="{STYLE_NAME}_checkbox" /></li>
+		<li class="style-details"><h3>{STYLE_NAME}</h3></li>
+		<li class="style-list-preview"><span {STYLE_PREVIEW_ID} class="font-preview {TYPE}">{STYLE_PREVIEW}</span></li>
+		<li class="actions">
+			<img src="{EDIT_ICON}" alt="edit" title="Edit Style"  class="anyfont-style-edit"  />
+			<img src="{DELETE_ICON}" alt="delete" title="Delete Style" onclick="AnyFont.deleteStyle('{STYLE_NAME}', '{STYLE_NAME_ID}', '{TYPE}');" />
+		</li>
+	</ul>
+	<div id="anyfont-options-{STYLE_NAME_ID}" class="anyfont-options-block" style="background-color:#FFFFFF;border-bottom:1px solid #dfdfdf;display:none;">
+		<fieldset class="anyfont-settings-block anyfont-style-settings">
+			<legend><span>Edit Style</span></legend>
+			<div class="anyfont-settings-content">
+				{OPTIONS}
+			</div>
+<!--			<div class="anyfont-css-preview">
+				Style Preview:
+			</div>-->
+		</fieldset>
+	</div>
+</li>

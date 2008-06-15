@@ -1,0 +1,30 @@
+<fieldset class="anyfont-settings-block">
+	<legend><span>{CACHE_SETTINGS_H2}</span></legend>
+	<div class="anyfont-settings-content">
+		<form id="cache_options">
+		<input type="hidden" name="option[0]" value="anyfont_cache_show_bytes" />
+		<div class="anyfont_checkbox{CACHE_SHOW_BYTES_ON_CLASS}">
+			<label for="#">display size in bytes</label>
+			<input class="anyfont_chk_only" name="anyfont_cache_show_bytes" type="checkbox" {CACHE_SHOW_BYTES_CHECKED} />
+		</div><span class="help-txt" title="{CACHE_SHOW_BYTES_HELP}"></span><br /><br />
+		<input type="hidden" name="option[1]" value="anyfont_cache_dashboard_widget" />
+		<div class="anyfont_checkbox{CACHE_DASHBOARD_ON_CLASS}">
+			<label for="#">enable dashboard widget</label>
+			<input class="anyfont_chk_only" name="anyfont_cache_dashboard_widget" type="checkbox" {CACHE_DASHBOARD_CHECKED} />
+		</div><span class="help-txt" title="{CACHE_DASHBOARD_HELP}"></span><br /><br />
+		<input type="hidden" name="option[2]" value="anyfont-limit-cache-size" />
+		<div class="anyfont_checkbox{CACHE_LIMIT_ON_CLASS}">
+			<label for="#">limit cache size</label>
+			<input id="anyfont_limit-cache-size" onchange="AnyFont.toggleHidden(this);" name="anyfont-limit-cache-size" type="checkbox" {CACHE_LIMIT_CHECKED} />
+		</div><span class="help-txt" title="{CACHE_LIMIT_HELP}"></span><br /><br />
+		<div class="hidden_option">
+			<input type="hidden" name="option[3]" value="anyfont-cache-size-limit" />
+			<label for="cache-max-size">cache size limit</label>
+			<input id="anyfont_cache-max-size" name="anyfont-cache-size-limit" class="cache-max-size shadow-spin" type="text" value="{CACHE_MAX_SIZE}" /><span class="help-txt" title="{CACHE_MAX_SIZE_HELP}"></span><br/>
+		</div>
+		<p class="submit">
+			<input type="button" class="button-primary" onclick="AnyFont.updateOptions('cache_options');"  value="Save Settings" />
+		</p>
+		</form>
+	</div>
+</fieldset>

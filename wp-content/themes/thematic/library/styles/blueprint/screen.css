@@ -1,0 +1,191 @@
+/* -----------------------------------------------------------------------
+
+
+ Blueprint CSS Framework 0.8
+ http://blueprintcss.org
+
+   * Copyright (c) 2007-Present. See LICENSE for more info.
+   * See README for instructions on how to use Blueprint.
+   * For credits and origins, see AUTHORS.
+   * This is a compressed file. See the sources in the 'src' directory.
+
+----------------------------------------------------------------------- */
+
+/* reset.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+/* typography.css */
+body {font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
+h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
+h2 {font-size:2em;margin-bottom:0.75em;}
+h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
+h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+p {margin:0 0 1.5em;}
+p img.left {float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.right {float:right;margin:1.5em 0 1.5em 1.5em;}
+a:focus, a:hover {color:#000;}
+a {color:#009;text-decoration:underline;}
+blockquote {margin:1.5em;color:#666;font-style:italic;}
+strong {font-weight:bold;}
+em, dfn {font-style:italic;}
+dfn {font-weight:bold;}
+sup, sub {line-height:0;}
+abbr, acronym {border-bottom:1px dotted #666;}
+address {margin:0 0 1.5em;font-style:italic;}
+del {color:#666;}
+pre {margin:0.3em 0;white-space:pre;}
+pre, code, tt {font:1em 'andale mono', 'lucida console', monospace;line-height:1.5;}
+li ul, li ol {margin:0 1.5em;}
+ul, ol {margin:0 1.5em 1.5em 1.5em;}
+ul {list-style-type:disc;}
+ol {list-style-type:decimal;}
+dl {margin:0 0 1.5em 0;}
+dl dt {font-weight:bold;}
+dd {margin-left:1.5em;}
+table {margin-bottom:1.4em;width:100%;}
+th {font-weight:bold;}
+thead th {background:#c3d9ff;}
+th, td, caption {padding:4px 10px 4px 5px;}
+tr.even td {background:#e5ecf9;}
+tfoot {font-style:italic;}
+caption {background:#eee;}
+.small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
+.large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
+.hide {display:none;}
+.quiet {color:#666;}
+.loud {color:#000;}
+.highlight {background:#ff0;}
+.added {background:#060;color:#fff;}
+.removed {background:#900;color:#fff;}
+.first {margin-left:0;padding-left:0;}
+.last {margin-right:0;padding-right:0;}
+.top {margin-top:0;padding-top:0;}
+.bottom {margin-bottom:0;padding-bottom:0;}
+
+/* grid.css */
+.container {width:1014px;margin:0 auto;}
+.showgrid {background:url(src/grid.png);}
+.column, div.span-1, div.span-2, div.span-3, div.span-4, div.span-5, div.span-6, div.span-7, div.span-8, div.span-9, div.span-10, div.span-11, div.span-12, div.span-13, div.span-14 {float:left;margin-right:8px;}
+.last, div.last {margin-right:0;}
+.span-1 {width:65px;}
+.span-2 {width:138px;}
+.span-3 {width:211px;}
+.span-4 {width:284px;}
+.span-5 {width:357px;}
+.span-6 {width:430px;}
+.span-7 {width:503px;}
+.span-8 {width:576px;}
+.span-9 {width:649px;}
+.span-10 {width:722px;}
+.span-11 {width:795px;}
+.span-12 {width:868px;}
+.span-13 {width:941px;}
+.span-14, div.span-14 {width:1014px;margin:0;}
+input.span-1, textarea.span-1, select.span-1 {width:65px!important;}
+input.span-2, textarea.span-2, select.span-2 {width:120px!important;}
+input.span-3, textarea.span-3, select.span-3 {width:193px!important;}
+input.span-4, textarea.span-4, select.span-4 {width:266px!important;}
+input.span-5, textarea.span-5, select.span-5 {width:339px!important;}
+input.span-6, textarea.span-6, select.span-6 {width:412px!important;}
+input.span-7, textarea.span-7, select.span-7 {width:485px!important;}
+input.span-8, textarea.span-8, select.span-8 {width:558px!important;}
+input.span-9, textarea.span-9, select.span-9 {width:631px!important;}
+input.span-10, textarea.span-10, select.span-10 {width:704px!important;}
+input.span-11, textarea.span-11, select.span-11 {width:777px!important;}
+input.span-12, textarea.span-12, select.span-12 {width:850px!important;}
+input.span-13, textarea.span-13, select.span-13 {width:923px!important;}
+input.span-14, textarea.span-14, select.span-14 {width:1004px!important;}
+.append-1 {padding-right:73px;}
+.append-2 {padding-right:146px;}
+.append-3 {padding-right:219px;}
+.append-4 {padding-right:292px;}
+.append-5 {padding-right:365px;}
+.append-6 {padding-right:438px;}
+.append-7 {padding-right:511px;}
+.append-8 {padding-right:584px;}
+.append-9 {padding-right:657px;}
+.append-10 {padding-right:730px;}
+.append-11 {padding-right:803px;}
+.append-12 {padding-right:876px;}
+.append-13 {padding-right:949px;}
+.prepend-1 {padding-left:73px;}
+.prepend-2 {padding-left:146px;}
+.prepend-3 {padding-left:219px;}
+.prepend-4 {padding-left:292px;}
+.prepend-5 {padding-left:365px;}
+.prepend-6 {padding-left:438px;}
+.prepend-7 {padding-left:511px;}
+.prepend-8 {padding-left:584px;}
+.prepend-9 {padding-left:657px;}
+.prepend-10 {padding-left:730px;}
+.prepend-11 {padding-left:803px;}
+.prepend-12 {padding-left:876px;}
+.prepend-13 {padding-left:949px;}
+div.border {padding-right:3px;margin-right:4px;border-right:1px solid #eee;}
+div.colborder {padding-right:60px;margin-right:61px;border-right:1px solid #eee;}
+.pull-1 {margin-left:-73px;}
+.pull-2 {margin-left:-146px;}
+.pull-3 {margin-left:-219px;}
+.pull-4 {margin-left:-292px;}
+.pull-5 {margin-left:-365px;}
+.pull-6 {margin-left:-438px;}
+.pull-7 {margin-left:-511px;}
+.pull-8 {margin-left:-584px;}
+.pull-9 {margin-left:-657px;}
+.pull-10 {margin-left:-730px;}
+.pull-11 {margin-left:-803px;}
+.pull-12 {margin-left:-876px;}
+.pull-13 {margin-left:-949px;}
+.pull-14 {margin-left:-1022px;}
+.pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12, .pull-13, .pull-14 {float:left;position:relative;}
+.push-1 {margin:0 -73px 1.5em 73px;}
+.push-2 {margin:0 -146px 1.5em 146px;}
+.push-3 {margin:0 -219px 1.5em 219px;}
+.push-4 {margin:0 -292px 1.5em 292px;}
+.push-5 {margin:0 -365px 1.5em 365px;}
+.push-6 {margin:0 -438px 1.5em 438px;}
+.push-7 {margin:0 -511px 1.5em 511px;}
+.push-8 {margin:0 -584px 1.5em 584px;}
+.push-9 {margin:0 -657px 1.5em 657px;}
+.push-10 {margin:0 -730px 1.5em 730px;}
+.push-11 {margin:0 -803px 1.5em 803px;}
+.push-12 {margin:0 -876px 1.5em 876px;}
+.push-13 {margin:0 -949px 1.5em 949px;}
+.push-14 {margin:0 -1022px 1.5em 1022px;}
+.push-1, .push-2, .push-3, .push-4, .push-5, .push-6, .push-7, .push-8, .push-9, .push-10, .push-11, .push-12, .push-13, .push-14 {float:right;position:relative;}
+.prepend-top {margin-top:1.5em;}
+.append-bottom {margin-bottom:1.5em;}
+.box {padding:1.5em;margin-bottom:1.5em;background:#E5ECF9;}
+hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;}
+.clearfix:after, .container:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+
+/* forms.css */
+label {font-weight:bold;}
+fieldset {padding:1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
+legend {font-weight:bold;font-size:1.2em;}
+input.text, input.title, textarea, select {margin:0.5em 0;border:1px solid #bbb;}
+input.text:focus, input.title:focus, textarea:focus, select:focus {border:1px solid #666;}
+input.text, input.title {width:300px;padding:5px;}
+input.title {font-size:1.5em;}
+textarea {width:390px;height:250px;padding:5px;}
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.error a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}

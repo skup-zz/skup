@@ -1,0 +1,122 @@
+﻿<div id="anyfont-tab-autoreplace" class="anyfont-options-block active-tab">
+    <p>{HELP_MSG}</p>
+    <p class="anyfont-note">{SEO_NOTE}</p>
+    <form id="autoreplace_form"  onsubmit="AnyFont.updateOptions('autoreplace_form'); return false;">
+
+		<!--Sitename and Description-->
+        <fieldset class="anyfont-settings-block fullwidth left">
+            <legend><span>Sitename and Description</span></legend>
+            <div class="anyfont-settings-content">
+                <input type="hidden" name="option[0]" value="anyfont_blog_title" />
+                <div style="float:left;" class="anyfont_checkbox{BLOG_TITLE_ON_CLASS}"><label for="#">blog name</label><input class="settings" type="checkbox" name="anyfont_blog_title[result]" id="anyfont_blog_title" {BLOG_TITLE_CHECKED} onchange="AnyFont.toggleDisabled(this);"/></div>
+                <select class="style-select" name="anyfont_blog_title[style]" {BLOG_TITLE_DISABLED}><option value="false">Select Style...</option>{BLOG_TITLE_STYLES}</select>
+                <span class="help-txt" title="{BLOG_TITLE_HELP}"></span><br /><br />
+
+                <input type="hidden" name="option[1]" value="anyfont_blog_desc" />
+                <div style="float:left;" class="anyfont_checkbox{BLOG_DESC_ON_CLASS}">
+                    <label for="#">blog description</label>
+                    <input class="settings" type="checkbox" name="anyfont_blog_desc[result]" id="anyfont_blog_desc" {BLOG_DESC_CHECKED} onchange="AnyFont.toggleDisabled(this);" />
+                </div>
+                <select class="style-select" name="anyfont_blog_desc[style]" {BLOG_DESC_DISABLED}><option value="false">Select Style...</option>{BLOG_DESC_STYLES}</select>
+                <span class="help-txt" title="{BLOG_DESC_HELP}"></span><br /><br />
+            </div>
+        </fieldset>
+
+		<!--Various Titles-->
+        <fieldset class="anyfont-settings-block fullwidth">
+            <legend><span>Headings and Titles</span></legend>
+            <div class="anyfont-settings-content">
+				{POST_BLOCK}
+
+                <input type="hidden" name="option[2]" value="anyfont_tag_title" />
+                <div style="float:left;" class="anyfont_checkbox{TAG_ON_CLASS}"><label for="#">tag titles</label><input class="settings" type="checkbox" name="anyfont_tag_title[result]" id="replace_tags" {TAG_CHECKED} onchange="AnyFont.toggleDisabled(this);"/></div>
+                <select class="style-select" name="anyfont_tag_title[style]" {TAG_DISABLED}><option value="false">Select Style...</option>{TAG_TITLE_STYLES}</select>
+                <span class="help-txt" title="{TAG_HELP}"></span><br /><br />
+
+                <input type="hidden" name="option[3]" value="anyfont_cat_title" />
+                <div style="float:left;" class="anyfont_checkbox{CAT_ON_CLASS}"><label for="#">category titles</label><input class="settings" type="checkbox" name="anyfont_cat_title[result]" id="replace_cats" {CAT_CHECKED} onchange="AnyFont.toggleDisabled(this);"/></div>
+                <select class="style-select" name="anyfont_cat_title[style]" {CAT_DISABLED}><option value="false">Select Style...</option>{CAT_TITLE_STYLES}</select>
+                <span class="help-txt" title="{CAT_HELP}"></span><br /><br />
+
+                <input type="hidden" name="option[4]" value="anyfont_widget_title" />
+                <div style="float:left;" class="anyfont_checkbox{WIDGET_ON_CLASS}"><label for="#">widget titles</label><input class="settings" type="checkbox" name="anyfont_widget_title[result]" id="replace_widget_title" {WIDGET_CHECKED} onchange="AnyFont.toggleDisabled(this);"/></div>
+                <select class="style-select" name="anyfont_widget_title[style]" {WIDGET_DISABLED}><option value="false">Select Style...</option>{WIDGET_TITLE_STYLES}</select>
+                <span class="help-txt" title="{WIDGET_HELP}"></span><br /><br />
+            </div>
+        </fieldset>
+
+        <!-- Menu Text -->
+        <fieldset class="anyfont-settings-block fullwidth">
+            <legend><span>Menu Text</span></legend>
+            <div class="anyfont-settings-content">
+
+                <input type="hidden" name="option[5]" value="anyfont_menu" />
+                <div style="float:left;" class="anyfont_checkbox{MENU_ON_CLASS}"><label for="#">menu text</label><input class="settings" type="checkbox" name="anyfont_menu[result]" id="anyfont_menu" {MENU_CHECKED} onchange="AnyFont.toggleDisabled(this);"/></div><span class="help-txt" title="{MENU_HELP}"></span><br /><br />
+                <label for="menu_style">style</label><select id="menu_style" class="style-select link-next" name="anyfont_menu[style]" {MENU_DISABLED}><option value="false">Select Style...</option>{MENU_STYLES}</select><br/><br/>
+                <label for="hover_style">hover style</label><select id="hover_style" class="style-select link-next" name="anyfont_menu[hover]" {MENU_DISABLED}><option value="false">Select Style...</option>{HOVER_STYLES}</select><br/><br/>
+                <label for="active_style">active style</label><select id="active_style" class="style-select link-next" name="anyfont_menu[active]" {MENU_DISABLED}><option value="false">Select Style...</option>{ACTIVE_STYLES}</select><br /><br />
+            </div>
+        </fieldset>
+
+		<!--Various Titles-->
+		 <p class="anyfont-note">The following section applies only to CSS3 styles. All replacements are <strong>100% SEO compatible</strong> as <strong>no images, flash or javascript is used</strong> and all the affected text remains plain text with the embedded font applied.</p>
+        <fieldset class="anyfont-settings-block fullwidth">
+            <legend><span>CSS3 Text Styles</span></legend>
+            <div class="anyfont-settings-content">
+                <input type="hidden" name="option[6]" value="anyfont_body_text" />
+                <div style="float:left;" class="anyfont_checkbox{BODY_ON_CLASS}">
+					<label for="#">Body Text</label>
+					<input class="settings" type="checkbox" name="anyfont_body_text[result]" id="replace_tags" {BODY_CHECKED} onchange="AnyFont.toggleDisabled(this);"/>
+				</div>
+                <select class="style-select" name="anyfont_body_text[style]" {BODY_DISABLED}>
+					<option value="false">Select CSS3 Style...</option>
+					{BODY_TEXT_STYLES}
+				</select>
+                <span class="help-txt" title="{BODY_HELP}"></span><br /><br />
+
+                <input type="hidden" name="option[7]" value="anyfont_header_text" />
+                <div style="float:left;" class="anyfont_checkbox{HEAD_ON_CLASS}">
+					<label for="#">Header Text</label>
+					<input class="settings" type="checkbox" name="anyfont_header_text[result]" id="replace_tags" {HEAD_CHECKED} onchange="AnyFont.toggleDisabled(this);"/>
+				</div>
+                <select class="style-select" name="anyfont_header_text[style]" {HEAD_DISABLED}>
+					<option value="false">Select CSS3 Style...</option>
+					{HEAD_TEXT_STYLES}
+				</select>
+                <span class="help-txt" title="{HEAD_HELP}"></span><br /><br />
+
+                <input type="hidden" name="option[8]" value="anyfont_content_text" />
+                <div style="float:left;" class="anyfont_checkbox{CONTENT_ON_CLASS}">
+					<label for="#">Content Text</label>
+					<input class="settings" type="checkbox" name="anyfont_content_text[result]" id="replace_tags" {CONTENT_CHECKED} onchange="AnyFont.toggleDisabled(this);"/>
+				</div>
+                <select class="style-select" name="anyfont_content_text[style]" {CONTENT_DISABLED}>
+					<option value="false">Select CSS3 Style...</option>
+					{CONTENT_TEXT_STYLES}
+				</select>
+                <span class="help-txt" title="{CONTENT_HELP}"></span><br /><br />
+
+                <input type="hidden" name="option[9]" value="anyfont_footer_text" />
+                <div style="float:left;" class="anyfont_checkbox{FOOTER_ON_CLASS}">
+					<label for="#">Footer Text</label>
+					<input class="settings" type="checkbox" name="anyfont_footer_text[result]" id="replace_tags" {FOOTER_CHECKED} onchange="AnyFont.toggleDisabled(this);"/>
+				</div>
+                <select class="style-select" name="anyfont_footer_text[style]" {FOOTER_DISABLED}>
+					<option value="false">Select CSS3 Style...</option>
+					{FOOTER_TEXT_STYLES}
+				</select>
+                <span class="help-txt" title="{FOOTER_HELP}"></span><br /><br />
+				<div id="css_custom_rule_block">
+					{CSS_RULE_BLOCK}
+                </div>
+            </div>
+        </fieldset>
+
+        <!--Submit Button-->
+        <p class="submit" style="margin: -10px 20px 10px;">
+            <input type="button" class="button-primary" onclick="AnyFont.updateOptions('autoreplace_form');" value="Save Settings" />
+        </p>
+    </form>
+    <div id="anyfont-note" class="warning">{DISCLAIMER}<br />{DISCLAIMER_CONT}</div>
+    <br />
+</div>

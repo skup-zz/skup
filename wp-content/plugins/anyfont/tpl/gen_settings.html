@@ -1,0 +1,37 @@
+<div id="anyfont-tab-settings" class="anyfont-options-block" style="display:none;">
+    <fieldset class="anyfont-settings-block">
+        <legend><span>General Settings</span></legend>
+        <div class="anyfont-settings-content">
+            <form id="general_options" >
+				<input type="hidden" name="option[0]" value="anyfont_enable_gzip" />
+				<div class="anyfont_checkbox{ENABLE_GZIP_ON_CLASS}">
+					<label for="#">enable gzip compression</label>
+					<input class="anyfont_chk_only" name="anyfont_enable_gzip" type="checkbox" {ENABLE_GZIP_CHECKED} />
+				</div><span class="help-txt" title="{ENABLE_GZIP_HELP}"></span><br /><br/>
+
+				<input type="hidden" name="option[1]" value="anyfont_enable_tinymce" />
+                <div style="float:left;" class="anyfont_checkbox{ENABLE_TINYMCE_ON_CLASS}">
+                    <label for="#">enable tinyMCE integration</label>
+                    <input id="anyfont_enable_tinymce" class="anyfont_chk_only" name="anyfont_enable_tinymce" type="checkbox" {ENABLE_TINYMCE_CHECKED} />
+                </div><span class="help-txt" title="{ENABLE_TINYMCE_HELP}"></span><br /><br/>
+
+				<input type="hidden" name="option[2]" value="anyfont_fav_links" />
+                <div style="float:left;" class="anyfont_checkbox{ENABLE_FAV_LINKS_ON_CLASS}">
+                    <label for="#">enable admin favourites</label>
+                    <input id="anyfont_fav_links" class="anyfont_chk_only" name="anyfont_fav_links" type="checkbox" {ENABLE_FAV_LINKS_CHECKED} />
+                </div><span class="help-txt" title="{ENABLE_FAV_LINKS_HELP}"></span><br /><br/>
+
+				<input type="hidden" name="option[3]" value="anyfont_disable_hotlinking" />
+                <div style="float:left;" class="anyfont_checkbox{DISABLE_HOTLINKING_ON_CLASS}">
+                    <label for="#">disable hotlinking</label>
+                    <input id="anyfont_disable_hotlinking" class="anyfont_chk_only" name="anyfont_disable_hotlinking" type="checkbox" {DISABLE_HOTLINKING_CHECKED} />
+                </div><span class="help-txt" title="{DISABLE_HOTLINKING_HELP}"></span><br />
+
+                <p class="submit">
+                    <input type="button" class="button-primary" onclick="AnyFont.updateOptions('general_options');" value="Save Settings" />
+                </p>
+            </form>
+        </div>
+    </fieldset>
+	{ADV_SETTINGS}
+</div>

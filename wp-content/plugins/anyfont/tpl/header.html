@@ -1,0 +1,29 @@
+﻿<style>
+{STYLE}
+</style>
+<script type="text/javascript">
+	if(typeof userSettings == 'undefined'){
+		var userSettings = {'url':"{URL}"}
+	}
+    var af_set = {
+		'url':"{URL}",
+		'cssstyles':{CSSSTYLES},
+		'permalinks':{PERMALINKS},
+		'imageurl':"{IMAGEURL}"
+    }
+	var af_i18n = {JSLANG};
+</script>
+<div id="anyfont_page" class="wrap">
+<div class="icon32 icon-{ICON_CLASS}"></div>
+<h2>
+<a class="nav-tab{SETTINGS_ACTIVE_NAV}" href="admin.php?page=anyfont-settings" title="{SETTINGS_PAGE_DESC}">{SETTINGS_PAGE_TITLE}</a>
+<a class="nav-tab{FONTS_ACTIVE_NAV}" href="admin.php?page=anyfont-fonts" title="{FONTS_PAGE_DESC}">{FONTS_PAGE_TITLE}</a>
+<a class="nav-tab{STYLES_ACTIVE_NAV}" href="admin.php?page=anyfont-styles" title="{STYLES__PAGE_DESC}">{STYLES_PAGE_TITLE}</a>
+</h2>
+<ul id="anyfont_status">
+<li><div class="status_heading">FontServ API Key:</div>{FONTSERV_KEY}</li>
+{FONTSERV_PACKAGE}
+</ul>
+{INSERT_TEXT}
+<div class="error_msg" style="display:none">{ERROR}</div>
+{ERROR_STYLE_OVERRIDE}

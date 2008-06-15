@@ -1,0 +1,43 @@
+	<style>
+	{CSS}
+	</style>
+	<div id="anyfont-page-options-{TYPE}">
+		<div class="add-new"><p class="submit"><input class="button-secondary" type="button" value="Create New Style" onclick="AnyFont.toggleNew('anyfont-style-new-{TYPE}');AnyFont.toggleNew('anyfont-{TYPE}-preview');" /></p></div>
+		<div class="delete-selected"><p class="submit"><input class="button-secondary" type="button" value="Delete Selected Styles" onclick="AnyFont.deleteStyle(false, false, '{TYPE}');" /></p></div>
+	</div>
+	<div id="anyfont-style-new-{TYPE}"  class="anyfont-style-new" style="display:none;">
+		<div>
+			<fieldset class="anyfont_style_settings anyfont-settings-block">
+			<legend><span>Create New Style</span></legend>
+			<form id="anyfont-style-new-form-{TYPE}">
+				<div class="anyfont-settings-content">
+					{NEW_STYLE_FORM}
+				</div>
+				<div id="anyfont-{TYPE}-preview" style="display:none;">
+					{PREVIEW}
+				</div>
+			</form>
+			</fieldset>
+			<br /><br />
+		</div>
+	</div>
+
+	<div id="anyfont-list-{TYPE}" class="anyfont-list">
+		<ul class="list-header">
+			<li class="checkbox"><input type="checkbox" name="selectall_checkbox" onclick="AnyFont.selectAll('anyfont-list-{TYPE}', this);" /></li>
+			<li class="style-details">Name</li>
+			<li class="font-preview">Preview</li>
+			<li class="actions">Actions</li>
+		</ul>
+		<ul class="style-list">
+			{STYLES}
+		</ul>
+		<ul class="list-footer">
+			<ul class="list-header">
+			<li class="checkbox"></li>
+			<li class="style-details">Name</li>
+			<li class="font-preview">Preview</li>
+			<li class="actions">Actions</li>
+		</ul>
+
+	</div>

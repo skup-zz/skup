@@ -1,0 +1,37 @@
+<li id="{FONTID}_font_block" class="anyfont-font-block" >
+	<ul id="{FONTID}_item" class="style-list-item">
+		<li class="checkbox"><input class="clist" type="checkbox" name="{FONT_NAME}_checkbox_{FONTID}" /></li>
+		<li class="font-details" onclick="AnyFont.showFontDetails('{FONTID}');">
+			<h3>{FONT_DISPLAY_NAME}</h3>
+			<span><strong>{FORMAT_TXT}</strong>{FONT_TYPES}</span><br />
+			<div class="webfont_status"><strong>{SUPP_STYLES_TXT}</strong><span id="{FONTID}_image_status" class="Yes">{IMAGES_TXT}</span>, <span id="{FONTID}_css3_status" class="{WEBFONT_CLASS}">{CSS3_TXT}</span><!--, <span id="{FONTID}_cufon_status" class="{CUFON_CLASS}">Cufon</span>--></div></li>
+		<li class="font-preview hideopen">
+			<img src="{FONT_URL}" alt="{DISPLAY_NAME}" onclick="AnyFont.showFontDetails('{FONTID}');">
+			<div class="font-tools">
+			{WEBFONT_BUTTON}
+			{CUFON_BUTTON}
+			</div>
+		</li>
+		<li class="actions">
+			<img src="{FONT_INFO_ICON}" alt="More Info" title="More Info" onclick="AnyFont.showFontDetails('{FONTID}');" />
+<!--             <img src="{CHARMAP_ICON}" alt="Character Map" title="Character Map" onclick="AnyFont.showCharacterMap('{FONT_NAME}', '{FONTID}');" /> -->
+<!--             <img src="{DELETE_ICON}" alt="Delete" title="Delete Font" onclick="AnyFont.deleteFont('{FONT_NAME}', '{FONTID}');" /> -->
+		</li>
+	</ul>
+	<div id="{FONTID}_font_details" class="fontextra fontinfo" style="display:none;">
+		{EXTRA_PREVIEWS}
+		<div class="font-details">
+			{AUTHOR}
+			{LICENSE}
+			{TRADEMARK}
+			{DESCRIPTION}
+			{FILE_NAME}
+		</div>
+	</div>
+<!--	<div id="{FONTID}_character_map_cont" class="charmap fontinfo">
+        <fieldset>
+            <legend>Character Map</legend>
+                <div id="{FONTID}_character_map" class="char-map"></div>
+        </fieldset>
+	</div>-->
+</li>

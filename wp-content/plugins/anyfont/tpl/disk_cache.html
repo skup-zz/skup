@@ -1,0 +1,23 @@
+<fieldset id="anyfont_disk_usage" class="anyfont-settings-block">
+	<legend><span>{CACHE_DISK_H2}</span></legend>
+	<div class="anyfont-settings-content">
+			<p><strong>Site Images:</strong> {IMAGE_COUNT} image(s) are using <strong>{TOTAL_SIZE}</strong></p>
+			<p><strong>Admin Images:</strong> {IMAGE_COUNT_ADMIN} image(s) are using <strong>{TOTAL_SIZE_ADMIN}</strong></p>
+			<p><strong>Total Cache Disk Usage:</strong> {TOTAL_SIZE_ALL} of <strong>{CACHE_LIMIT}</strong> disk space used. {CACHE_PERCENTAGE}</p>
+
+			<h4><strong>Font Overview:</strong></h4>
+			<ul>
+				<li><strong>Truetype: </strong>{TTF_COUNT} file(s) uses <strong>{TTF_SIZE}</strong></li>
+				<li><strong>OpenType: </strong>{OTF_COUNT} file(s) uses <strong>{OTF_SIZE}</strong></li>
+				<li><strong>EOT(Microsoft Web Font): </strong>{EOT_COUNT} file(s) uses <strong>{EOT_SIZE}</strong></li>
+				<li><strong>Woff(Mozilla Web Font): </strong>{WOFF_COUNT} file(s) uses <strong>{WOFF_SIZE}</strong></li>
+<!-- 				<li><strong>Cufon: </strong>{CUFON_COUNT} files uses {CUFON_SIZE}</li> -->
+			</ul><br/>
+			<ul>
+				<li>A total of <strong>{FONT_COUNT} fonts</strong> are using <strong>{FONT_SIZE}</strong></li>
+			</ul>
+		<p class="submit">
+		{CLEAR_CACHE_BUTTON}
+		</p>
+	</div>
+</fieldset>

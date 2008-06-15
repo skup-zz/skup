@@ -1,0 +1,16 @@
+<li>
+	<ul id="{FONTID}_item" class="style-list-item">
+		<li class="font-details">{FONT_TYPE}</li>
+		<li class="font-preview"><img src="{FONT_URL}" alt="{FONT_DISPLAY_NAME}"/></li>
+		<li class="actions">
+			<img src="{CHARMAP_ICON}" alt="Character Map" title="Character Map" onclick="AnyFont.showCharacterMap('{FONT_NAME}', '{FONTID}');" />
+			<img src="{DELETE_ICON}" alt="Delete" title="Delete Font" onclick="AnyFont.deleteFont('{FONT_NAME}', '{FONTID}');" />
+		</li>
+	</ul>
+	<div id="{FONTID}_character_map_cont" class="charmap fontinfo" style="display:none;">
+		<fieldset>
+			<legend><span>Character Map</span></legend>
+			<div id="{FONTID}_character_map" class="char-map"></div>
+		</fieldset>
+	</div>
+</li>

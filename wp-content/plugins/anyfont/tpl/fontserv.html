@@ -1,0 +1,20 @@
+<div id="anyfont-tab-fontserv" class="anyfont-options-block" style="display:none;">
+    <fieldset class="anyfont-settings-block">
+        <legend><span>FontServ.com Integration</span></legend>
+        <div class="anyfont-settings-content">
+			<div id="anyfont-fontserv-key-status">
+				{KEY_STATUS}
+
+			</div>
+            <form id="fontserv_options" onsubmit="AnyFont.updateOptions('fontserv_options'); return false;">
+               <input type="hidden" name="option[0]" value="anyfont-fontserv-api-key" />
+               <label for="anyfont_fontserv-api-key">FontServ API key:</label>
+               <input id="anyfont_fontserv-api-key" name="anyfont-fontserv-api-key" type="text" value="{API_KEY}" /><span class="help-txt" title="{API_KEY_HELP}"></span><br/><br/>
+               {FONTSERV_EXTRA_SETTINGS}
+				<p class="submit">
+                <input type="button" class="button-primary" onclick="AnyFont.updateOptions('fontserv_options');"  value="Save Settings" />
+				</p>
+            </form>
+        </div>
+    </fieldset>
+</div>

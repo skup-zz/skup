@@ -1,0 +1,10 @@
+<input type="hidden" name="option[{OPTION_NUMBER}]" value="anyfont_{POST_TYPE}_title" />
+<div style="float:left;" class="anyfont_checkbox{POST_ON_CLASS}">
+	<label for="#">{POST_TYPE} titles</label>
+	<input class="settings" type="checkbox" name="anyfont_{POST_TYPE}_title[result]" id="replace_{POST_TYPE}" {POST_CHECKED} onchange="AnyFont.toggleDisabled(this);"/>
+</div>
+<select class="style-select" name="anyfont_{POST_TYPE}_title[style]" {POST_DISABLED}>
+	<option value="false">Select Style...</option>
+	{POST_TITLE_STYLES}
+</select>
+<span class="help-txt" title="{POST_HELP}"></span><br /><br />

@@ -1,0 +1,102 @@
+/*   
+Theme Name: A Thematic Child Theme
+Theme URI: 
+Description: Use this theme to start your Thematic Child Theme development.
+Author: skup
+Author URI: http://themeshaper.com/
+Template: thematic
+Version: 1.0
+Tags: Thematic
+.
+Thematic is © Ian Stewart http://themeshaper.com/
+.
+*/
+
+/* Reset browser defaults */
+@import url('../thematic/library/styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('../thematic/library/styles/typography.css');
+
+/* Apply a basic layout */
+@import url('../thematic/library/layouts/2c-r-fixed.css');
+
+/* Apply basic image styles */
+@import url('../thematic/library/styles/images.css');
+
+/* Apply default theme styles and colors */
+/* It's better to actually copy over default.css into this file (or link to a copy in your child theme) if you're going to do anything outrageous */
+@import url('../thematic/library/styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('../thematic/library/styles/plugins.css');
+
+@import url('../thematic/library/styles/blueprint/screen.css');
+
+
+/* =Structure
+-------------------------------------------------------------- */
+
+	#body1
+{
+background-image:url(images/back3.png);
+
+ 	background-position:top center;
+    background-repeat:no-repeat ;
+    background-attachment: fixed;
+    height:100%;
+    width: 100%;
+}
+
+	#body2
+{
+	background-image:url(images/back4.png);
+ 	background-position:bottom center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    height:100%;
+    width: 100%;
+
+}
+/*
+Two column structure for posts and pages
+*/
+.page #container,
+.single #container {
+    width:620px;
+    float:left;
+	padding-right:280px;
+	padding-bottom:180px;
+}
+.page #content,
+.single #content {
+	padding-right:50px;
+    margin:0;
+    width:540px;
+    overflow:hidden;
+}
+.page .main-aside,
+.single .main-aside {
+	padding-top:60px;
+	padding-right:20px;
+    position:fixed;
+	float:inherit;
+}
+.page #primary,
+.single #primary {
+    width:300px;
+   	height:200px;
+    float:right;
+	
+}
+.page #secondary,
+.single #secondary {
+    clear:right;
+    margin:0 10px 0 0;
+    float:right;
+    width:300px;
+}
+
+/* =mine
+-------------------------------------------------------------- */
+

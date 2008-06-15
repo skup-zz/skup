@@ -1,0 +1,11 @@
+<div id="custom_{CSS_RULE_ID}">
+<input type="hidden" name="css_options[{CSS_RULE_NUM}]" value="anyfont_{CSS_RULE_NAME}" />
+<div style="float:left;" class="anyfont_checkbox{CSS_RULE_ON_CLASS}">
+	<label for="#">{CSS_RULE_LABEL}</label>
+	<input class="settings" type="checkbox" name="anyfont_{CSS_RULE_NAME}[result]" id="replace_tags" {CSS_RULE_CHECKED} onchange="AnyFont.toggleDisabled(this);"/>
+</div>
+<select class="style-select" name="anyfont_{CSS_RULE_NAME}[style]" {CSS_RULE_DISABLED}>
+<option value="false">Select Style...</option>
+	{CSS_RULE_STYLES}
+</select><span class="help-txt" title="{CSS_RULE_HELP}"></span>{CSS_RULE_DELETE}<br /><br />
+</div>

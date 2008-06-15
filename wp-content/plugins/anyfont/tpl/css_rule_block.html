@@ -1,0 +1,9 @@
+<input id="new_rules" type="hidden" name="rules" value="0" />
+{CSS3_CUSTOM_FIELDS}
+<input type="hidden" name="new_rule[0]" value="anyfont_new_0" />
+<input type="text" name="anyfont_new_0[result]" style="width: 218px;" value="Add a custom CSS Rule" onfocus="this.value='';"/>
+<select class="style-select" name="anyfont_new_0[style]">
+	<option value="false">Select CSS3 Style...</option>
+	{CSS3_CUSTOM_STYLES}
+</select>
+<span class="help-txt" title="{CSS3_NEW_CUSTOM_HELP}"></span><span id="add_new_row" onclick="AnyFont.insertCSSRule();" class="anyfont_add_del_btn"><img src="{ANYFONT_URL}/img/add.png" title="Add another custom CSS Rule" alt="add" /></span><br /><br />

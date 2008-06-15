@@ -1,0 +1,57 @@
+{HEADER}
+<div id="anyfont-page-options">
+	<div class="add-new">
+        <p class="submit">
+            <input class="button-secondary" type="button" value="Upload New Font" onclick="AnyFont.toggleNew('anyfont-upload-new');" />
+        </p>
+	</div>
+	<div class="delete-selected">
+        <p class="submit">
+            <input class="button-secondary" type="button" value="Delete Selected Fonts" onclick="AnyFont.deleteFont(false);" />
+            <!--TODO: Pagination functionality, target version-1.2 -->
+<!--            <span id="anyfont_per_page_option">Fonts per page?
+								<select id="anyfont_per_page_select">
+									<option value="10">10</option>
+									<option value="20">20</option>
+									<option value="50">50</option>
+									<option value="all">All</option>
+								</select></span>-->
+        </p>
+    </div>
+</div>
+<div id="anyfont-upload-messages" class="updated"  style="display:none;clear:both;" ></div>
+<div id="anyfont-upload-new" style="display:none;clear:both;" ><br /><br />
+	<form id="file_upload_form" method="post" enctype="multipart/form-data" action="{UPLOAD_URL}">
+		<fieldset class="anyfont-settings-block">
+            <legend><span>Upload New Font</span></legend>
+			 <div class="anyfont-settings-content">
+				<p id="anyfont-upload-desc">Select a TrueType or OpenType font on your computer to upload.</p>
+				<input name="font" id="font" size="27" type="file" />
+				<p id="anyfont-upload-note">Note: Windows does not allow you to upload fonts directly from the system font folder!</p>
+				<p class="submit">
+					<input type="submit" name="action" value="Upload Font" class="button-primary" onclick="AnyFont.startUpload();" style="float:right;" />
+					<input type="button" name="cancel" value="Cancel" class="button-secondary" style="float:right;margin-right:15px;" onclick="AnyFont.toggleNew('anyfont-upload-new');"/>
+				</p>
+			 </div>
+			<iframe id="upload_target"  name="upload_target" style="width:0;height:0;border:0px solid #fff;display:none"></iframe>
+		</fieldset>
+	</form>
+</div>
+<div  id="anyfont-list" class="anyfont-list">
+	<ul class="font list-header">
+		<li class="checkbox"><input type="checkbox" name="selectall_checkbox" onclick="AnyFont.selectAll('anyfont-list', this);" /></li>
+		<li class="font-details">Font Details</li>
+		<li class="font-preview">Preview</li>
+		<li class="actions">Actions</li>
+	</ul>
+	<ul id="anyfont-fontlist" class="font-list">
+		{FONTS}
+	</ul>
+	<ul class="list-header">
+		<li class="checkbox"></li>
+		<li class="font-details">Font Details</li>
+		<li class="font-preview">Preview</li>
+		<li class="actions">Actions</li>
+	</ul>
+</div>
+{FOOTER}

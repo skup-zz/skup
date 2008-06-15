@@ -1,0 +1,54 @@
+    <fieldset class="anyfont-settings-block">
+        <legend><span>{ADVANCED_H2}</span></legend>
+        <div class="anyfont-settings-content">
+            <form id="advanced_form" >
+                <p>{ADVANCED_MSG}</p>
+				<input type="hidden" name="option[0]" value="anyfont-enable-custom-fontdir" />
+				<div class="anyfont_checkbox{ENABLE_CUSTOM_FONTDIR_ON_CLASS}">
+					<label for="#">custom font folder</label>
+					<input id="anyfont-enable-custom-fontdir" onchange="AnyFont.toggleHidden(this);" name="anyfont-enable-custom-fontdir" type="checkbox" {ENABLE_CUSTOM_FONTDIR_CHECKED} />
+				</div><span class="help-txt" title="{ENABLE_CUSTOM_FONTDIR_HELP}"></span>
+				<div class="hidden_option simple" style="float:left;margin-left:25px;">
+					<input type="hidden" name="option[1]" value="anyfont-custom-fontdir" />
+					<input id="anyfont-custom-fontdir" name="anyfont-custom-fontdir"  type="text" value="{ANYFONT_FONTDIR}" style="width:350px;" />
+				</div><br/><br/>
+				<input type="hidden" name="option[2]" value="anyfont-enable-custom-cache" />
+				<div class="anyfont_checkbox{ENABLE_CUSTOM_CACHEDIR_ON_CLASS}">
+					<label for="#">custom cache folder</label>
+					<input id="anyfont-enable-custom-cache" onchange="AnyFont.toggleHidden(this);" name="anyfont-enable-custom-cache" type="checkbox" {ENABLE_CUSTOM_CACHEDIR_CHECKED} />
+				</div><span class="help-txt" title="{ENABLE_CUSTOM_CACHEDIR_HELP}"></span>
+				<div class="hidden_option simple" style="float:left;margin-left:25px;">
+					<input type="hidden" name="option[3]" value="anyfont-custom-cachedir" />
+					<input id="anyfont-custom-cachedir" name="anyfont-custom-cachedir" type="text" value="{ANYFONT_CACHE_DIR}" style="width:350px;" />
+				</div><br/><br/>
+				<div id="anyfont_permalinks_option" {HIDE_PRETTYLINKS}>
+					<input type="hidden" name="option[7]" value="anyfont_disable_prettylinks" />
+					<div class="anyfont_checkbox{DISABLE_PRETTYLINKS_ON_CLASS}" onclick="AnyFont.optionSwap('anyfont_disable_prettylinks', 'anyfont_use_htaccess', 'anyfont_htaccess_option_block');" >
+						<label for="#">disable image permalinks</label>
+						<input id="anyfont_disable_prettylinks" name="anyfont_disable_prettylinks" type="checkbox" value="on" {DISABLE_PRETTYLINKS_CHECKED}/>
+					</div><span class="help-txt" title="{DISABLE_PRETTYLINKS_HELP}"></span><br/><br/>
+				</div>
+				<input type="hidden" name="option[6]" value="anyfont_image_module" />
+				<div {HIDE_MODULE_SELECT}>
+                <label for="anyfont_image_module">php image module</label>
+                <select id="anyfont_image_module" name="anyfont_image_module">{IMAGE_MODULE_OPTIONS}</select><br /><br />
+                </div>
+                <div id="anyfont_htaccess_option_block" {HTACCESS_CLASS} {HIDE_HTACCESS}>
+				<p   class="anyfont-important" >{IMPORTANT_MESSAGE}</p>
+				<input type="hidden" name="option[4]" value="anyfont_use_htaccess"/>
+				<div class="anyfont_checkbox{ENABLE_HTACCESS_ON_CLASS}"  onclick="AnyFont.optionSwap('anyfont_use_htaccess', 'anyfont_disable_prettylinks', 'anyfont_permalinks_option');">
+					<label for="#">enable htaccess rules</label>
+					<input id="anyfont_use_htaccess" name="anyfont_use_htaccess" type="checkbox" value="on" {ENABLE_HTACCESS_CHECKED} />
+				</div><span class="help-txt" title="{ENABLE_HTACCESS_HELP}"></span><br/><br/>
+<!--				<input type="hidden" name="option[5]" value="anyfont_add_mimetype" />
+				<div class="anyfont_checkbox{ENABLE_MIMETYPE_ON_CLASS}">
+					<label for="#">enable font mime-types</label>
+					<input id="anyfont_add_mimetype" name="anyfont_add_mimetype" type="checkbox" {ENABLE_MIMETYPE_CHECKED} />
+				</div><span class="help-txt" title="{ENABLE_MIMETYPE_HELP}"></span><br/><br/>-->
+				</div>
+                <p class="submit">
+                    <input type="button" class="button-primary" onclick="AnyFont.updateOptions('advanced_form');" value="Save Settings" />
+                </p>
+            </form>
+        </div>
+    </fieldset>
