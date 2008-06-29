@@ -160,26 +160,22 @@ function child_logo_image() {
  
  //--------------------------------------------------------------------------------------------------------------
  ?>
+	
 
-	<div id="wrapper"><a href="index.php">
     <div id="logo"><a href="index.php" title=""><img src="<?php bloginfo('template_url'); ?>/images/logo3.png" alt=""/></a></div>
-	</div>
+
 
 
 	<style type="text/css">
-	#background-link{z-index:1}
 
-	#wrapper {
-	margin-right: 60px;
-	float:center;
-    position: absolute;
-	}
 	
     #logo {
-	position: fixed;!important;
-
-	padding-top: 49px;
-	margin-left: 880px;
+	width:60%;
+	height:60%;
+	position: fixed;
+	z-index:1;
+	padding-top: 4px;
+	padding-left:880px;
 	}
 	</style>
 
@@ -199,47 +195,7 @@ function childtheme_welcome_blurb() {
 // (so, not page 2,3,etc.)
 if (is_home() & !is_paged()) { ?>
  
-<!-- our welcome blurb starts here -->
-<div id="cimy_div_id">Loading images...</div>
-<div class="cimy_div_id_caption"></div>
-<style type="text/css">
-	#cimy_div_id {
-		height:100%;
-		width:100%;
-		padding-bottom: 320;
-		align: center;
-		float: left;
-		margin-top: 34px;
-		margin-left: 116px;
-		padding-left: 140px;
-		border: 15px solid #ffffff;
-		width: 650px;
-		height: 200px;
-	
-	}
-	div.cimy_div_id_caption {
-		width:100%;
-		position:absolute;
-		margin-left: 162px;
-		margin-top: 223px;
-		width: 120px;
-		text-align: left;
-		left: 50%;
-		padding: 4px 16px;
-		background: #f9aeb0;
-		color: black;
-		font-family: Georgia, "Times New Roman", Times, serif;
-		border-radius: 0px;
-		display: none;
-		z-index: 2;
-	}
-</style>
-<noscript>
-	<div id="cimy_div_id_nojs">
-		<img id="cimy_img_id" src="http://localhost/xampp/wordpress/wp-content/Cimy_Header_Images/AfterWood.jpg" alt="" />
-	</div>
-</noscript>
-</div>
+<?php aio_slideshow(); ?>
 
 <!-- our welcome blurb ends here -->
 <?php }

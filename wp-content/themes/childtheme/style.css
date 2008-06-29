@@ -39,8 +39,8 @@ Thematic is © Ian Stewart http://themeshaper.com/
 
 	#body1
 {
-background-image:url(images/back3.png);
-
+	background-image:url(images/back3.png);
+	background-color:#a1a1a1;
  	background-position:top center;
     background-repeat:no-repeat ;
     background-attachment: fixed;
@@ -50,8 +50,9 @@ background-image:url(images/back3.png);
 
 	#body2
 {
+	background-color:#a1a1a1;
 	background-image:url(images/back4.png);
- 	background-position:bottom center;
+ 	background-position:top center;
     background-repeat:no-repeat;
     background-attachment: fixed;
     height:100%;
@@ -67,6 +68,7 @@ Two column structure for posts and pages
     float:left;
 	padding-right:280px;
 	padding-bottom:180px;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 .page #content,
 .single #content {
@@ -74,20 +76,22 @@ Two column structure for posts and pages
     margin:0;
     width:540px;
     overflow:hidden;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 .page .main-aside,
 .single .main-aside {
 	padding-top:60px;
-	padding-right:20px;
+	padding-right:68px;
     position:fixed;
 	float:inherit;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 .page #primary,
 .single #primary {
     width:300px;
    	height:200px;
     float:right;
-	
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 .page #secondary,
 .single #secondary {
@@ -95,6 +99,7 @@ Two column structure for posts and pages
     margin:0 10px 0 0;
     float:right;
     width:300px;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* =mine
